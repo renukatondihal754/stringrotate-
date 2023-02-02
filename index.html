@@ -10,35 +10,68 @@
    }
    .displayBox{
      display:flex;
+     margin-top:2rem;
+     margin-left:4rem;
+   }
+   .input{
+     margin-left:25rem;
+     /*min-height:100px;*/
+     /*width:100px;*/
    }
 
    .btn{
-     font-size:3rem;
+     font-size:5rem;
+     /*text-orientation:upright;*/
+     /*font-size-adjust:0.5;*/
+     /*margin-top:2rem;*/
      font-weight:bloder;
-     border:2px solid black;
+     border:4px solid black;
      padding:2rem;
-   }
+     content:"\2039";
+     display:flex;
+     align-items:center;
+     content: "\203A";
+     
+     /*hanging-punctuation: last;*/
+    
 
+
+   }
+  
    .display{
      width:70%;
      min-height:400px;
      font-size:5rem;
-     background-color:aqua;
+     text-align:center;
+     background-color:#1FC8DB;
      color:white;
+     border:3px solid black;
+     background-image: linear-gradient(140deg, #EADEDB 0%, #BC70A4 50%, #BFD641 75%);
+   }
+   .right{
+     /*background:repeating-linear-gradient();*/
+     background: repeating-linear-gradient(45deg, #3f87a6, #ebf8e1 15%, #f69d3c 20%);
+     /*align-content:center;*/
+     /*position:relative;*/
+     /*top:20px;*/
+     /*left:6px;*/
+   }
+   .left{
+     background: repeating-linear-gradient(45deg, #3f87a6, #ebf8e1 15%, #f69d3c 20%);
    }
   </style> 
 </head>
 <body>
   <div class="container">
     <div class="input">
-     <input type="text"placeholder="enter a string">
-     <button>Submit</button>
+     <input type="text"placeholder="enter a string" style=" height:50px; background:lightpink; width:300px;">
+     <button style="background:lightskyblue; margin-left:2rem; height:30px; width:100px; margin-top:2rem;">Submit</button>
     </div>
       <div class="displayBox">
   
-        <div class="btn left"><</div>
+        <div class="btn left"><span>&#8249;</span></div>
         <div class="display"></div>
-        <div class="btn right">></div>
+        <div class="btn right"><span>&#8250;</span></div>
       </div>
 
   </div>

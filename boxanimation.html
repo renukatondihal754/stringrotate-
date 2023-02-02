@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+     *{
+         padding:0;
+         margin:0;
+     }
+     body{
+         display:flex;
+         justify-content:center;
+         align-items:center;
+         height:100vh;
+         background:goldenrod;
+
+     }
+     .container{
+         position:fixed;
+         height:600px;
+         width:600px;
+         border:1px solid black;
+         display:grid;
+         grid-template-columns:1fr 1fr;
+         grid-template-rows:1fr 1fr;
+         box-sizing:border-box;
+     }
+     .upright{
+         border:2px solid black;
+         background:sandybrown;
+     }
+
+     .upleft{
+         border:2px solid black;
+         background:powderblue;
+     }
+     .downright{
+         border:2px solid black;
+         background:cadetblue;
+     }
+
+    .downleft{
+        border:2px solid black;
+         background:rosybrown;
+    }
+    .upright:hover{
+        background:#FFCCE1;
+    }
+    .upleft:hover{
+        background:olivedrab;
+    }
+    .downright:hover{
+        background:#FAFFC7;
+    }
+    .downleft:hover{
+        background:#E0D7FF;
+
+    }
+    .img1{
+        z-index:1;
+        height:600px;
+        width:600px;
+    }
+    img{
+        position:relative;
+        width:"200px";
+        height:"200px";
+    }
+    </style>
+</head>
+<body>
+    <div class="img1">
+        <img src="C:\Users\appia\OneDrive\Desktop\stringrotate\stringrotate\depositphotos_76840867-stock-illustration-pointing-at-himself-emoticon (1).jpg" alt="smile" >
+
+    </div>
+    <div class="container">
+        <div class="upright"></div>
+        <div class="upleft"></div>
+        <div class="downright"></div>
+        <div class="downleft"></div>
+    </div>
+    <script>
+     let move=document.querySelector("img")
+     move.style.position="relative"
+     move.style.left="3px"
+     move.style.top="3px"
+     window.addEventListener("keydown",keypress)
+     function keypress(key){
+         if(key.keycode=="39"){
+             move.style.left="302px"
+             move.style.transition="0.8s"
+         }
+         else if(key.keycode=="40"){
+             move.style.top="320px"
+             move.style.transition="0.8s"
+         }
+         else if(key.keycode=="37"){
+             move.style.left="3px"
+         
+        }
+        else if(key.keycode=="38"){
+             move.style.top="3px"
+        }
+       else{
+         alert("PLZ PRESS ARROW KEYS")
+         }  
+     }
+   
+    </script>
+</body>
+</html>
